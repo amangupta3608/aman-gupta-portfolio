@@ -57,14 +57,14 @@ export function Contact() {
   }, [toast]);
 
   return (
-    <section id="contact" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mb-10 max-w-3xl">
+    <section id="contact" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+      <div className="mb-8 max-w-3xl sm:mb-10">
         <p className="mb-3 text-sm font-medium uppercase tracking-[0.24em] text-cyan-300">Contact</p>
         <h2 className="section-heading">Let&apos;s build robust delivery systems together</h2>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[0.7fr_1.3fr]">
-        <Card className="rounded-3xl p-6">
+        <Card className="rounded-3xl p-5 sm:p-6">
           <h3 className="text-xl font-semibold text-white">Reach out</h3>
           <div className="mt-6 space-y-4 text-slate-300">
             <a href={socialLinks.email} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 transition-colors hover:border-cyan-400/30 hover:text-cyan-300">
@@ -82,7 +82,7 @@ export function Contact() {
           </div>
         </Card>
 
-        <Card className="rounded-3xl p-6">
+        <Card className="rounded-3xl p-5 sm:p-6">
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
             <div>
               <label htmlFor="name" className="mb-2 block text-sm font-medium text-slate-200">Name</label>

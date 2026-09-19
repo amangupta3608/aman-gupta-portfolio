@@ -18,14 +18,14 @@ export function Pipeline() {
   }, []);
 
   return (
-    <section id="pipeline" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mb-12 max-w-3xl">
+    <section id="pipeline" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+      <div className="mb-8 max-w-3xl sm:mb-12">
         <p className="mb-3 text-sm font-medium uppercase tracking-[0.24em] text-cyan-300">Workflow</p>
         <h2 className="section-heading">DevOps pipeline view</h2>
       </div>
 
-      <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-        <div className="hidden gap-2 sm:grid sm:grid-cols-8">
+      <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:gap-8 lg:items-center">
+        <div className="hidden gap-2 lg:grid lg:grid-cols-8">
           {pipelineStages.map((stage, index) => (
             <button
               key={stage.name}
@@ -46,7 +46,7 @@ export function Pipeline() {
           ))}
         </div>
 
-        <div className="space-y-4 sm:hidden">
+        <div className="space-y-3 lg:hidden">
           {pipelineStages.map((stage, index) => (
             <button
               key={stage.name}
@@ -72,10 +72,10 @@ export function Pipeline() {
           initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
           animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="glass-card rounded-3xl p-6"
+          className="glass-card rounded-3xl p-5 sm:p-6"
         >
           <p className="text-sm uppercase tracking-[0.22em] text-cyan-300">Stage</p>
-          <h3 className="mt-3 text-3xl font-semibold text-white">{pipelineStages[activeStage].name}</h3>
+          <h3 className="mt-3 text-2xl font-semibold text-white sm:text-3xl">{pipelineStages[activeStage].name}</h3>
           <p className="mt-4 text-base leading-7 text-slate-300">{pipelineStages[activeStage].description}</p>
         </motion.div>
       </div>

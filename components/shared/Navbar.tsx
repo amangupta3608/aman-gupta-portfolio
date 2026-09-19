@@ -1,12 +1,11 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
-import Link from "next/link";
 import * as React from "react";
 
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
-import { navItems, profile } from "@/data/portfolio";
+import { navItems } from "@/data/portfolio";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -35,14 +34,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="#top" className="flex items-center gap-3 text-sm font-medium text-white">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-cyan-400 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30">
-            AG
-          </span>
-          <span className="hidden sm:inline">{profile.name}</span>
-        </Link>
-
-        <nav className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
+        <nav className="hidden items-center gap-6 text-sm text-slate-300 md:flex md:flex-1 md:justify-center">
           {navItems.map((item) => (
             <a
               key={item.href}

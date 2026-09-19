@@ -19,19 +19,19 @@ export function Skills() {
   const prefersReducedMotion = useReducedMotion() ?? false;
 
   return (
-    <section id="skills" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mb-10 max-w-3xl">
+    <section id="skills" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+      <div className="mb-8 max-w-3xl sm:mb-10">
         <p className="mb-3 text-sm font-medium uppercase tracking-[0.24em] text-cyan-300">Skills</p>
         <h2 className="section-heading">Tools, platforms, and workflows I deliver with</h2>
       </div>
 
       <Tabs.Root defaultValue={skillCategories[0].title} className="space-y-6">
-        <Tabs.List className="flex flex-wrap gap-2 rounded-2xl border border-white/10 bg-slate-950/40 p-2">
+        <Tabs.List className="flex max-w-full flex-wrap gap-2 rounded-2xl border border-white/10 bg-slate-950/40 p-2">
           {skillCategories.map((category) => (
             <Tabs.Trigger
               key={category.title}
               value={category.title}
-              className="rounded-xl px-4 py-2 text-sm font-medium text-slate-300 transition-all data-[state=active]:bg-gradient-to-r data-[state=active]:from-indigo-500 data-[state=active]:to-cyan-400 data-[state=active]:text-white"
+              className="rounded-xl px-3 py-2 text-left text-xs font-medium text-slate-300 transition-all sm:px-4 sm:text-sm data-[state=active]:bg-gradient-to-r data-[state=active]:from-indigo-500 data-[state=active]:to-cyan-400 data-[state=active]:text-white"
             >
               {category.title}
             </Tabs.Trigger>

@@ -44,14 +44,14 @@ export function TerminalCard() {
         <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
       </div>
 
-      <div className="space-y-3 font-mono text-xs text-slate-200">
+      <div className="min-w-0 space-y-3 overflow-hidden font-mono text-xs text-slate-200">
         <div className="text-cyan-300">$ whoami</div>
-        <div className="ml-3 text-slate-300">aman.gupta | devops-cloud</div>
+        <div className="ml-3 break-words text-slate-300">aman.gupta | devops-cloud</div>
 
-        <div className="mt-2 rounded-xl border border-white/10 bg-slate-950/70 p-3">
-          <div className="mb-2 text-cyan-300">{active.prompt}</div>
+        <div className="mt-2 min-w-0 rounded-xl border border-white/10 bg-slate-950/70 p-3">
+          <div className="mb-2 break-words text-cyan-300">{active.prompt}</div>
           {active.output.map((line, index) => (
-            <div key={line} className={index === 0 ? "text-emerald-300" : "text-slate-300"}>
+            <div key={line} className={`break-words ${index === 0 ? "text-emerald-300" : "text-slate-300"}`}>
               {line}
             </div>
           ))}

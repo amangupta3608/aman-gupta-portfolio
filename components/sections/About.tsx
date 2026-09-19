@@ -12,8 +12,8 @@ export function About() {
   const prefersReducedMotion = useReducedMotion() ?? false;
 
   return (
-    <section id="about" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mb-10 max-w-3xl">
+    <section id="about" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+      <div className="mb-8 max-w-3xl sm:mb-10">
         <p className="mb-3 text-sm font-medium uppercase tracking-[0.24em] text-cyan-300">About</p>
         <h2 className="section-heading">Building reliable systems for modern delivery</h2>
       </div>
@@ -23,7 +23,7 @@ export function About() {
         whileInView={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.25 }}
         transition={{ duration: 0.45 }}
-        className="glass-card rounded-3xl p-6 sm:p-8"
+        className="glass-card rounded-3xl p-5 sm:p-8"
       >
         <p className="text-lg leading-8 text-slate-300">{summary}</p>
       </motion.div>

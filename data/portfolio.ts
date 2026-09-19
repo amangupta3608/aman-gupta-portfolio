@@ -158,7 +158,7 @@ export const education = {
 export const profile = {
   name: "Aman Gupta",
   title: "DevOps & Cloud Engineer (Software Engineer – DevOps & Cloud Engineering)",
-  location: "Delhi, India (currently working in Pune, India)",
+  location: "Delhi, India",
   email: "amangupta0213@gmail.com",
   githubUrl: socialLinks.github,
   linkedinUrl: socialLinks.linkedin,

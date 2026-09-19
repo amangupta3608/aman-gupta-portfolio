@@ -14,8 +14,8 @@ export function Projects() {
   const prefersReducedMotion = useReducedMotion() ?? false;
 
   return (
-    <section id="projects" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mb-12 max-w-3xl">
+    <section id="projects" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+      <div className="mb-8 max-w-3xl sm:mb-12">
         <p className="mb-3 text-sm font-medium uppercase tracking-[0.24em] text-cyan-300">Projects</p>
         <h2 className="section-heading">Selected systems and delivery-focused work</h2>
       </div>
@@ -61,7 +61,7 @@ function TiltCard({
         onMouseMove={handleMove}
         onMouseLeave={() => setTilt({ x: 0, y: 0 })}
       >
-        <div className="mb-5 flex items-center justify-between gap-4">
+        <div className="mb-5 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-cyan-300">{project.subtitle}</p>
             <h3 className="mt-2 text-2xl font-semibold text-white">{project.title}</h3>
@@ -104,11 +104,11 @@ function TiltCard({
             </Dialog.Trigger>
             <Dialog.Portal>
               <Dialog.Overlay className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm" />
-              <Dialog.Content className="fixed left-1/2 top-1/2 z-50 w-[min(92vw,720px)] -translate-x-1/2 -translate-y-1/2 rounded-3xl border border-white/10 bg-slate-950 p-6 shadow-2xl shadow-indigo-950/30">
+              <Dialog.Content className="fixed left-1/2 top-1/2 z-50 max-h-[85vh] w-[calc(100vw-2rem)] -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-3xl border border-white/10 bg-slate-950 p-4 shadow-2xl shadow-indigo-950/30 sm:w-[min(92vw,720px)] sm:p-6">
                 <div className="mb-4 flex items-start justify-between gap-4">
                   <div>
                     <p className="text-xs uppercase tracking-[0.2em] text-cyan-300">{project.subtitle}</p>
-                    <Dialog.Title className="mt-2 text-2xl font-semibold text-white">{project.title}</Dialog.Title>
+                    <Dialog.Title className="mt-2 text-xl font-semibold text-white sm:text-2xl">{project.title}</Dialog.Title>
                   </div>
                   <Dialog.Close asChild>
                     <button type="button" aria-label="Close dialog" className="rounded-full border border-white/10 p-2 text-slate-300">
