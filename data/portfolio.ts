@@ -78,14 +78,10 @@ export const experience = [
     period: "06/2025 – Present",
     tags: ["CI/CD", "Terraform", "Ansible", "Vault", "AWS", "Git"],
     points: [
-      "Worked on CI/CD workflows to automate build, deployment, and release processes across application environments, improving deployment consistency.",
-      "Implemented infrastructure automation using Terraform and Ansible for repeatable infrastructure provisioning and configuration management.",
-      "Integrated HashiCorp Vault with application and deployment workflows for secure secrets and credential management.",
-      "Supported deployments and production environments by troubleshooting configuration issues, deployment failures, and service-level incidents.",
-      "Participated in root cause analysis using logs, application behavior, and deployment configurations to identify and resolve system issues.",
-      "Collaborated with development teams on backend services, deployment workflows, environment configuration, and operational reliability.",
-      "Automated repetitive operational and deployment tasks using scripting and configuration management.",
-      "Worked with Git-based workflows and environment-specific configurations to support controlled releases and deployment changes.",
+      "Automated CI/CD workflows for consistent builds, deployments, and releases across environments.",
+      "Provisioned and configured repeatable infrastructure with Terraform and Ansible.",
+      "Integrated HashiCorp Vault for secure secrets delivery across application and deployment workflows.",
+      "Supported AWS production environments through deployment troubleshooting, root cause analysis, and operational automation.",
     ],
   },
 ];
