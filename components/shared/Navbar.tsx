@@ -6,7 +6,7 @@ import * as React from "react";
 
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
-import { navItems, profile, socialLinks } from "@/data/portfolio";
+import { navItems, profile } from "@/data/portfolio";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -55,14 +55,6 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="hidden items-center gap-2 sm:flex">
-            <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="rounded-full border border-white/10 p-2 text-slate-200 transition-colors hover:border-cyan-400/50 hover:text-cyan-300">
-              GitHub
-            </a>
-            <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="rounded-full border border-white/10 p-2 text-slate-200 transition-colors hover:border-cyan-400/50 hover:text-cyan-300">
-              LinkedIn
-            </a>
-          </div>
           <ThemeToggle />
           <Button
             type="button"
